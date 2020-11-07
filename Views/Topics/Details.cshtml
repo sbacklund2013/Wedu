@@ -1,0 +1,17 @@
+﻿@model Wedu.Models.Topic
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="row">
+    <img src="@Html.DisplayNameFor(model => model.HeaderImagePath)" alt="header image" />
+    <p>Live? @Html.DisplayFor(model => model.Status)</p>
+    <h1>@Html.DisplayFor(model => model.Title)</h1>
+    <p class="lead"> @Html.DisplayFor(model => model.Description)</p>
+</div>
+
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to Courses</a>
+</div>
